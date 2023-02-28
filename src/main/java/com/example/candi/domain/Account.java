@@ -15,21 +15,20 @@ import java.util.Objects;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Candidate {
+public class Account {
     @Id
     @GeneratedValue
     private Long id;
-    private String name;
-    private String lastName;
     private String email;
+    private String name;
     private String password;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Candidate candidate = (Candidate) o;
-        return id != null && Objects.equals(id, candidate.id);
+        Account account = (Account) o;
+        return id != null && Objects.equals(id, account.id);
     }
 
     @Override

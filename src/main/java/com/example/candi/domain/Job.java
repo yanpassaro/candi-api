@@ -21,6 +21,7 @@ public class Job {
     private Long id;
     private String title;
     private String description;
+    private String type;
     private String salary;
     private String company;
 
