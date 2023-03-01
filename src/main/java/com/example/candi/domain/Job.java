@@ -3,6 +3,7 @@ package com.example.candi.domain;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.*;
 import org.hibernate.Hibernate;
 
@@ -24,6 +25,8 @@ public class Job {
     private String type;
     private String salary;
     private String company;
+    @OneToOne
+    private Account account;
 
     @Override
     public boolean equals(Object o) {

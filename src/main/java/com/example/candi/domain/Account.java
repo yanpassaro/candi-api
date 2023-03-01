@@ -22,6 +22,7 @@ public class Account {
     private String email;
     private String name;
     private String password;
+    private String token;
 
     @Override
     public boolean equals(Object o) {

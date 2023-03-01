@@ -13,5 +13,6 @@ public record JobDTO(
         String salary,
         @Size(min = 3, max = 50) @NotNull
         String company
+
 ) {
 }

@@ -4,8 +4,6 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
-import java.io.Serializable;
-
 public record AccountDTO(
         Long id,
         @Email
@@ -13,6 +11,7 @@ public record AccountDTO(
         @Size(min = 3, max = 50) @NotNull
         String name,
         @Size(min = 3, max = 50) @NotNull
-        String password
-) implements Serializable {
+        String token
+
+) {
 }
